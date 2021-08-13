@@ -18,6 +18,9 @@ async function formOnSubmit(event) {
   let bmiIndex = Math.floor(weight / (height * height));
   console.log(bmiIndex);
 
-  document.querySelector("#bmiResult").innerHTML = bmiIndex;
-  document.querySelector(".collapse").classList.remove(".collapse");
+  const resultDiv = document.querySelector("#bmiResult");
+
+  resultDiv.innerHTML = `<h3>[Your BMI index is ${bmiIndex} !]</h3>`;
+  resultDiv.classList.remove("collapse");
+  console.log(resultDiv.classList);
 }
